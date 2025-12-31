@@ -135,5 +135,5 @@ chmod 775 /home/<user>/rtmp_streamer_cache
 
 
 License
-GPL
+GNU General Public License v3.0
 
