@@ -118,7 +118,9 @@ Step 9:  Reboot!
 
 Done!
 
-Notes: First run the script will process your intro/outro files and convert them to the same format as your stream set in the moonbeamer.cfg/moonraker.conf options. If you do not have any intro/outro files disable the option.
+Notes: First run the script will process your intro/outro files and convert them to the same format
+ as your stream set in the moonbeamer.cfg/moonraker.conf options. If you do not have any intro/outro
+ files disable the option.
 
 #------------------Additional Info------------------#
 
