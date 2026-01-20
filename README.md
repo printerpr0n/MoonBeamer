@@ -34,14 +34,22 @@ sudo apt install -y ffmpeg
 
 ## Download MoonBeamer
 1. - Us your preferred method to download the repo. 
-	- Use the green "Code" button in the top right and choose "Download Zip". Use your favorite SSH/SCP program to transfer to your 3D printer host Raspberry Pi / Print Server.
-	- Use curl to download the project files: "curl -L -O https://github.com/printerpr0n/MoonBeamer/archive/refs/heads/main.zip"
-	- Use wget to down the project file: "wget https://github.com/printerpr0n/MoonBeamer/archive/refs/heads/main.zip"
-	- Use git to clone the repo: "git clone https://github.com/printerpr0n/MoonBeamer.git"
-The last method gives you an uncompressed folder. The first 3 methods require you to unzip the file into your user directory which klipper/moonraker is running under and installed. For most Raspberry Pi installes this will be "pi" or the user you created at setup.
+	- Use the green "Code" button in the top right and choose "Download Zip".
+		Use your favorite SSH/SCP program to transfer to your 3D printer host Raspberry Pi / Print Server.
+	- Use curl to download the project files:
+		"curl -L -O https://github.com/printerpr0n/MoonBeamer/archive/refs/heads/main.zip"
+	- Use wget to down the project file:
+		"wget https://github.com/printerpr0n/MoonBeamer/archive/refs/heads/main.zip"
+	- Use git to clone the repo:
+		"git clone https://github.com/printerpr0n/MoonBeamer.git"
+
+The last method gives you an uncompressed folder. The first 3 methods require you to unzip the file into your
+ user directory which klipper/moonraker is running under and installed. For most Raspberry Pi installes this
+ will be "pi" or the user you created at setup.
 
 Unzipping the file should leave you with a "MoonBeamer-main" folder.
-	- Rename the folder with the following command: "mv MoonBeamer-main MoonBeamer"
+	- Rename the folder with the following command:
+		"mv MoonBeamer-main MoonBeamer"
 
 
 ## Install Instructions
