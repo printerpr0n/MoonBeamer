@@ -44,7 +44,7 @@ sudo apt install -y ffmpeg
 		"git clone https://github.com/printerpr0n/MoonBeamer.git"
 
 The last method gives you an uncompressed folder. The first 3 methods require you to unzip the file
- into your user directory which klipper/moonraker is running under and installed. For most Raspberry
+ into your user directory which Klipper/Moonraker is running under and installed. For most Raspberry
  Pi installs this will be "pi" or the user you created at setup.
 
 Unzipping the file should leave you with a "MoonBeamer-main" folder.
@@ -75,13 +75,13 @@ Step 3: Add MoonBeamer config to moonraker.conf
 	
 	- Add config to the moonraker.conf. Copy and paste the contents of the moonbeamer.cfg file into the
 	  end of your moonranker.conf file. 
-        You will need to replace all the <user> entried with the username Klipper/Moonraker
+        You will need to replace all the <user> entries with the username Klipper/Moonraker
 		was installed under.
 
-	- Alternatively you can copy the entire moonbeamer.cfg file to your config directory where you your
-	  moonraker.conf/printer.cfg files are stored and add an [include] to the moonraker.conf file instead
-	  of copying and pasting the contrents into the moonraker.conf file. This keeps your moonraker.conf
-	  file cleaner and allows for easier debuging.
+	- Alternatively you can copy the entire moonbeamer.cfg file to your config directory where your
+	  moonraker.conf/printer.cfg files are stored and add an [include] to the moonraker.conf file
+	  instead of copying and pasting the contrents into the moonraker.conf file. This keeps your
+	  moonraker.conf file cleaner and allows for easier debuging.
 
 		- Run command: "cp examples/moonraker.conf.d/moonbeamer.cfg ~/printer_data/config/"
 		- Then add "[include moonbeamer.cfg]" to your moonraker.conf file.
@@ -93,14 +93,14 @@ Step 4: Restart Moonraker service with the command: "sudo systemctl restart moon
 	(Optional, you can also just reboot)
 
 --------
-Step 5: Add macros (Mainsail/Fluidd buttons) Copy the example macro file into your Klipper config directory
-		and include it. Example (Klipper config dir often /home/<user>/printer_data/config/):
+Step 5: Add macros (Mainsail/Fluidd buttons) Copy the example macro file into your Klipper config
+	directory and include it. Example (Klipper config dir often /home/<user>/printer_data/config/):
 
 Run command:
-	"cp examples/klipper_macros/moonbeamer_macros.cfg /home/<user>/printer_data/config/moonbeamer_macros.cfg"
+"cp examples/klipper_macros/moonbeamer_macros.cfg /home/<user>/printer_data/config/moonbeamer_macros.cfg"
 	
 --------
-Step 6: Then add to your printer.cfg or mainsail.cfg
+Step 6: Then add to your printer.cfg
 
 	Copy and paste the line below:
 		[include moonbeamer_macros.cfg]
