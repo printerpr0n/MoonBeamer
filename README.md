@@ -48,22 +48,25 @@ Unzipping the file should leave you with a "MoonBeamer-main" folder.
 
  - Find your Moonraker source directory. Common example: /home/<user>/moonraker/moonraker/components/
 
-
- - The main component (rtmp_streamer.py) needs to be placed into the moonraker components directory. This may be different depending on your distro / install / user.
+ - The main component (rtmp_streamer.py) needs to be placed into the moonraker components directory.
+   This may be different depending on your distro / install / user.
 
 --------
 Step 1:	Copy component into Moonraker
 	Change into the MoonBeamer Directory: "cd MoonBeamer"
 	Replace the <user> with your current username klipper/moonraker was installed under.
-	Run command:  "cp moonbeamer/rtmp_streamer.py /home/<user>/moonraker/moonraker/components/rtmp_streamer.py
+	Run command:
+		"cp moonbeamer/rtmp_streamer.py /home/<user>/moonraker/moonraker/components/rtmp_streamer.py"
 
 --------
-Step 2: Restart Moonraker service with the command: "sudo systemctl restart moonraker" (Optional, you can also just reboot)
+Step 2: Restart Moonraker service with the command: "sudo systemctl restart moonraker"
+	(Optional, you can also just reboot)
 
 --------
 Step 3: Add MoonBeamer config to moonraker.conf
 	
-	- Add config to the moonraker.conf. Copy and paste the contents of the moonbeamer.cfg file into the end of your moonranker.conf file. 
+	- Add config to the moonraker.conf. Copy and paste the contents of the moonbeamer.cfg file into the
+	  end of your moonranker.conf file. 
         You will need to replace all the <user> entried with the username Klipper/Moonraker was installed under.
 
 	- Alternatively you can copy the entire moonbeamer.cfg file to your config directory where you your moonraker.conf/printer.cfg files are stored and add an [include] to the moonraker.conf file instead of copying and pasting the contrents into the moonraker.conf file. This keeps your moonraker.conf file cleaner and allows for easier debuging.
