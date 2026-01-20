@@ -35,7 +35,7 @@ sudo apt install -y ffmpeg
 ## Download MoonBeamer
 1. - Us your preferred method to download the repo. 
 	- Use the green "Code" button in the top right and choose "Download Zip".
-		Use your favorite SSH/SCP program to transfer to your 3D printer host Raspberry Pi / Print Server.
+		Use your favorite SSH/SCP program to transfer to your 3D printer host Raspberry Pi/Print Server.
 	- Use curl to download the project files:
 		"curl -L -O https://github.com/printerpr0n/MoonBeamer/archive/refs/heads/main.zip"
 	- Use wget to down the project file:
@@ -43,9 +43,9 @@ sudo apt install -y ffmpeg
 	- Use git to clone the repo:
 		"git clone https://github.com/printerpr0n/MoonBeamer.git"
 
-The last method gives you an uncompressed folder. The first 3 methods require you to unzip the file into your
- user directory which klipper/moonraker is running under and installed. For most Raspberry Pi installes this
- will be "pi" or the user you created at setup.
+The last method gives you an uncompressed folder. The first 3 methods require you to unzip the file
+ into your user directory which klipper/moonraker is running under and installed. For most Raspberry
+ Pi installs this will be "pi" or the user you created at setup.
 
 Unzipping the file should leave you with a "MoonBeamer-main" folder.
 	- Rename the folder with the following command:
@@ -75,20 +75,29 @@ Step 3: Add MoonBeamer config to moonraker.conf
 	
 	- Add config to the moonraker.conf. Copy and paste the contents of the moonbeamer.cfg file into the
 	  end of your moonranker.conf file. 
-        You will need to replace all the <user> entried with the username Klipper/Moonraker was installed under.
+        You will need to replace all the <user> entried with the username Klipper/Moonraker
+		was installed under.
 
-	- Alternatively you can copy the entire moonbeamer.cfg file to your config directory where you your moonraker.conf/printer.cfg files are stored and add an [include] to the moonraker.conf file instead of copying and pasting the contrents into the moonraker.conf file. This keeps your moonraker.conf file cleaner and allows for easier debuging.
+	- Alternatively you can copy the entire moonbeamer.cfg file to your config directory where you your
+	  moonraker.conf/printer.cfg files are stored and add an [include] to the moonraker.conf file instead
+	  of copying and pasting the contrents into the moonraker.conf file. This keeps your moonraker.conf
+	  file cleaner and allows for easier debuging.
+
 		- Run command: "cp examples/moonraker.conf.d/moonbeamer.cfg ~/printer_data/config/"
 		- Then add "[include moonbeamer.cfg]" to your moonraker.conf file.
-		- As with previous method be sure to go through the moonbeamer.cfg file and replace all <user> entires with your username or the directory Klipper/Moonraker is installed under.
+		- As with previous method be sure to go through the moonbeamer.cfg file and replace all <user>
+		  entires with your username or the directory Klipper/Moonraker is installed under.
 
 -------- 
-Step 4: Restart Moonraker service with the command: "sudo systemctl restart moonraker" (Optional, you can also just reboot)
+Step 4: Restart Moonraker service with the command: "sudo systemctl restart moonraker"
+	(Optional, you can also just reboot)
 
 --------
-Step 5: Add macros (Mainsail/Fluidd buttons) Copy the example macro file into your Klipper config directory and include it. Example (Klipper config dir often /home/<user>/printer_data/config/):
+Step 5: Add macros (Mainsail/Fluidd buttons) Copy the example macro file into your Klipper config directory
+		and include it. Example (Klipper config dir often /home/<user>/printer_data/config/):
 
-	Run command:  "cp examples/klipper_macros/moonbeamer_macros.cfg /home/<user>/printer_data/config/moonbeamer_macros.cfg"
+Run command:
+	"cp examples/klipper_macros/moonbeamer_macros.cfg /home/<user>/printer_data/config/moonbeamer_macros.cfg"
 	
 --------
 Step 6: Then add to your printer.cfg or mainsail.cfg
